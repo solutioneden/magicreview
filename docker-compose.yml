@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  ai-magic-review:
+    build: .
+    ports:
+      - "5588:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app
+      - LANGCHAIN_TRACING_V2=false
+      - LANGCHAIN_API_KEY=xxxx
+      - OPENAI_API_KEY=xxxxxx
